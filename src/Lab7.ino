@@ -36,11 +36,11 @@ void loop()
 	Particle.publish("temperature", String(temperatureCelsius));
 }
 
-BLYNK_WRITE(V1)
+BLYNK_WRITE(V3)
 {
 	int pushNotification = param.asInt();
 	if (pushNotification == 1)
 	{
-		Blynk.logEvent("push_notifications", "Hey, Blynk push here!");
+		Blynk.logEvent("push_notifications_", "Hey, Blynk push here!");
 	}
 }
